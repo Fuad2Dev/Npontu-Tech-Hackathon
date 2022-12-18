@@ -20,6 +20,7 @@ class TaskFactory extends Factory
         
         return [
             'name' => $this->faker->sentence(),
+            'description' => $this->faker->sentence(15),
             'status' => $this->faker->randomElement(['uncompleted', 'pending', 'completed']),
             'deadline' => now()->addDays(rand(1,3))
         ];

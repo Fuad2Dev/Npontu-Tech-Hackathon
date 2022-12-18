@@ -10,6 +10,8 @@ class Activity extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description'];
+
     public function tasks()
     {
         return $this->hasMany(Task::class);
@@ -19,5 +21,4 @@ class Activity extends Model
     {
         return $this->belongsToMany(User::class, 'tasks');
     }
-
 }

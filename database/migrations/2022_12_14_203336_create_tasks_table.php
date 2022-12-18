@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('activity_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('name');
+            $table->mediumText('description');
             $table->enum('status', ['uncompleted', 'pending', 'completed']);
             $table->timestamp('deadline');
             $table->timestamps();
